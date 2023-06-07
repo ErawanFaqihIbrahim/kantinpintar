@@ -284,8 +284,10 @@
         <div class="group-350">
             <div class="overlap-group">
                 <div class="rectangle-86"></div>
-                <img class="vector" src="{{ URL::asset('image/penilaian.jpeg') }}" alt="penilaian">
-                <div class="penilaian">Penilaian</div>
+                <a href={{ 'reviewkedai' }}>
+                    <img class="vector" src="{{ URL::asset('image/penilaian.jpeg') }}" alt="penilaian">
+                    <div class="penilaian">Penilaian</div>
+                </a>
             </div>
         </div>
         <div class="overlap-group4">

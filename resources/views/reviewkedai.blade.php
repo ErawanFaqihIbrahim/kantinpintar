@@ -70,7 +70,7 @@
 <body>
 
     <div class="homepage">
-        <div><a href="#">
+        <div><a href={{ 'homepage2' }}>
             <img class="vector" src="{{ URL::asset('image/kembali.jpeg') }}" alt="kembali" />
         </a>
         </div>
@@ -120,10 +120,12 @@
                     <h6>Fathia Rahma <small><br><i>28/04/2023</i></small></h6>
                     <p>Lezat dan bergiji!</p>
                 </div>
+
                 <div>
                     <img src="{{ URL::asset('image/rating.jpeg') }}" style="width:60px;">
                     <div class="text-block">4.5</div>
                 </div>
+
             </div>
         </div>
     </div>

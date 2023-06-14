@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
-
 class kedaiController extends Controller
 {
     public function showKedai()
@@ -15,5 +14,6 @@ class kedaiController extends Controller
         return view('homepage1', ['dataKedai' => $dataKedai] );
 
     }
+
  }
 

@@ -423,7 +423,7 @@
         <div class="group-container">
             <div class="group-100">
                 <img class="vector" src={{ asset('image/vector.svg') }} alt="Vector" />
-                <div class="kembali"><a href={{ '/menu' }}>Kembali</div></a>
+                <div class="kembali"><a href={{ '/homepage' }}>Kembali</div></a>
             </div>
             {{-- <img class="group-206" src="group-206.png" alt="Group 206" /> --}}
         </div>

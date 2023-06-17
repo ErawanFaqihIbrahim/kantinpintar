@@ -27,12 +27,12 @@ class menuController extends Controller
 
         $dataMenu = Menu::where('kedaiID', $kedaiID)->get();
 
-        $namaKedai = DB::table('menus')
-            ->join('kedais', 'menus.kedaiID', '=', 'kedais.kedaiID')
-            ->where('kedais.kedaiID', $kedaiID)
+        $namaKedai = DB::table('menu')
+            ->join('kedai', 'menu.kedaiID', '=', 'kedai.kedaiID')
+            ->where('kedai.kedaiID', $kedaiID)
             ->first();
 
-        $cektransaksi = DB::table('transaksis')->where('pesananID', $latest->pesananID)->get();
+        $cektransaksi = DB::table('transaksi')->where('pesananID', $latest->pesananID)->get();
         if (count($cektransaksi) != 0) {
             $jumlah = 0;
             $total = 0;

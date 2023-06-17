@@ -280,7 +280,7 @@
             display: flex;
             margin-left: 2px;
             margin-top: 62px;
-            margin-bottom: 10px;
+            margin-bottom: 50px;
             width: 390px;
             justify-content: center;
 

@@ -17,12 +17,18 @@
             border: 1px none;
             display: flex;
             flex-direction: column;
-            height: 898px;
+            height: 778px;
             width: 390px;
             padding: 7px 26px;
             padding-bottom: 81px;
             box-sizing: border-box;
+            overflow: scroll;
         }
+
+        .pesen-makan-2::-webkit-scrollbar {
+            display: none;
+        }
+
 
         .hidden,
         .hidden * {
@@ -299,9 +305,13 @@
     <div class="pesen-makan-2 screen">
 
         <div class="group-101">
-            <a href={{'/homepage2'}}>
-            <img class="vector" src="{{ URL::asset('image/vector.svg') }}" alt="Vector" />
-            <div class="kembali">Kembali</div>
+
+                <img class="vector" src="{{ URL::asset('image/vector.svg') }}" alt="Vector" />
+                <a href={{'/homepage'}}>
+                {{-- <a href={{ '/menu'.$namaKedai->kedaiID }}> --}}
+                            <div class="kembali">Kembali</div>
+            {{-- <img class="vector" src="{{ URL::asset('image/vector.svg') }}" alt="Vector" />
+            <span class="kembali">Kembali</span> --}}
         </a>
         </div>
 

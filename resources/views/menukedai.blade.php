@@ -300,7 +300,7 @@
             alt="Line 2" />
         <div class="group-115">
             <div class="overlap-group">
-                <a href={{ 'uploadmenu' }}>
+                <a href={{ 'uploadmenu/form' }}>
                     <div class="tambahkan">Tambahkan</div><img class="icround-plus"
                         src="{{ URL::asset('image/ic-round-plus.svg') }}" alt="ic:round-plus" />
                 </a>
@@ -341,18 +341,24 @@
         @endif
 
         <div class="group-container">
-            <div class="group-119"><img class="icon-home-outline" src="{{ URL::asset('image/-icon-home-outline.png') }}"
+            <div class="group-119">
+                <a href={{'homepage'}}>
+                <img class="icon-home-outline" src="{{ URL::asset('image/-icon-home-outline.png') }}"
                     alt='icon "home outline"' />
                 <div class="place poppins-normal-burnt-sienna-16px">Home</div>
+                </a>
             </div>
             <div class="group-113"><img class="round" src="{{ URL::asset('image/ic-round-menu-book.svg') }}"
                     alt="ic:round-menu-book" />
                 <div class="menu">Menu</div>
             </div>
-            <div class="group-114"><img class="round"
+            <div class="group-114">
+                <a href={{'diproses'}}>
+                <img class="round"
                     src="{{ URL::asset('image/material-symbols-list-alt-outline-rounded.svg') }}"
                     alt="material-symbols:list-alt-outline-rounded" />
                 <div class="order poppins-normal-burnt-sienna-16px">Order</div>
+                </a>
             </div>
         </div>
 

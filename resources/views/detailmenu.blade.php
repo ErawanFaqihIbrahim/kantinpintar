@@ -289,8 +289,9 @@
                     <div class="ellipse-9 ellipse"></div>
                     <img class="mask-group" src="{{ asset('image/' . $detailMenu->menuGambar) }}" alt="Mask group" />
                     <div class="group-99 group">
-                        <img class="vector" src="{{ URL::asset('image/vector.svg') }}" alt="Vector" /><a
-                            href={{ '/menu' }}>
+                        <img class="vector" src="{{ URL::asset('image/vector.svg') }}" alt="Vector" />
+                        {{-- <a href={{ '/menu' }}> --}}
+                            <a href="/menu/{{ $detailMenu['kedaiID']}}">
                             <div class="kembali">Kembali</div>
 
                     </div></a>

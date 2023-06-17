@@ -16,7 +16,7 @@ class PesananController extends Controller
     {
         $dataMenu = Menu::find($menuID);
         $latest = Pesanan::latest('pesananID')->first();
-        $cektransaksi = DB::table('transaksis')->where('pesananID', $latest->pesananID)->get();
+        $cektransaksi = DB::table('transaksi')->where('pesananID', $latest->pesananID)->get();
 
         //kalo udah dibayar (ada di tabel transaksi) buat pesanan baru
         if (count($cektransaksi) != 0) {
@@ -56,13 +56,13 @@ class PesananController extends Controller
         $latest = Pesanan::latest('pesananID')->first();
         $pesananID = $latest->pesananID;
 
-        $cektransaksi = DB::table('transaksis')->where('pesananID', $latest->pesananID)->get();
+        $cektransaksi = DB::table('transaksi')->where('pesananID', $latest->pesananID)->get();
 
         $total = ListPesanan::where('pesananID', $pesananID)->sum('pesananHarga');
 
-        $dataPesanan = DB::table('list_pesanans')
-            ->crossjoin('menus', 'list_pesanans.menuid', '=', 'menus.menuid')
-            ->where('list_pesanans.pesananID', $pesananID)
+        $dataPesanan = DB::table('listpesanan')
+            ->crossjoin('menu', 'listpesanan.menuid', '=', 'menu.menuid')
+            ->where('listpesanan.pesananID', $pesananID)
             ->get();
 
         $pesanan = $dataPesanan->first();

@@ -29,8 +29,8 @@ class BayarController extends Controller
         $total = $dataListPesanan->sum('pesananHarga');
 
         //ngambil menu pesanan
-        $dataMenuPesanan = DB::table('list_pesanans')
-        ->leftjoin('menus', 'list_pesanans.menuID', '=', 'menus.menuID')
+        $dataMenuPesanan = DB::table('listpesanan')
+        ->leftjoin('menu', 'listpesanan.menuID', '=', 'menu.menuID')
         ->where('pesananID', $pesananID)
         ->get();
 
@@ -38,9 +38,9 @@ class BayarController extends Controller
         $dataPesanan = Pesanan::where('pesananID', $pesananID)->first();
 
         //ngambil akunPenjualID
-        $dataMenu = DB::table('menus')
-            ->leftjoin('kedais', 'menus.kedaiID', '=', 'kedais.kedaiID')
-            ->where('menus.menuID', ($dataListPesanan->first())->menuID)
+        $dataMenu = DB::table('menu')
+            ->leftjoin('kedai', 'menu.kedaiID', '=', 'kedai.kedaiID')
+            ->where('menu.menuID', ($dataListPesanan->first())->menuID)
             ->first();
 
         //ngambil data pembeli kurangin saldo

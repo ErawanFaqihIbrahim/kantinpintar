@@ -13,6 +13,8 @@ class AkunPembeli extends Model implements AuthenticatableContract
     use HasFactory, Authorizable, Authenticatable;
 
     public $timestamps=false;
+    protected $table = 'akunpembeli';
+
 
     public function penilaian(){
         //samain kayak nama model yang mau kamu sambungin
@@ -23,7 +25,6 @@ class AkunPembeli extends Model implements AuthenticatableContract
         return $this->hasMany('App\Models\CodeTopUp');
     }
 
-    protected $table = 'akunpembeli';
 
     protected $fillable = [
         'akunEmail',

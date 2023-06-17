@@ -5,7 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class menu extends Model
+class Menu extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
+
+    protected $table='menu';
+
+        protected $fillable = [
+            'menuID',
+           'menuNama',
+           'menuGambar',
+           'menuHarga',
+           'menuDeskripsi',
+           'kedaiID'
+
+        ];
+
+        protected $primaryKey = 'menuID';
+
+
 }

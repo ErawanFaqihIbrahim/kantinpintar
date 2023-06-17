@@ -19,7 +19,7 @@ class PenilaianMenuController extends Controller
         $menuID = $request->input('menuID');
         $request->session()->put('menuID', $menuID);
 
-        $menuNama = Menu::join('penilaian', 'penilaian.menuID', '=', 'menu.menuID')
+        $menuNama = Menus::join('penilaian', 'penilaian.menuID', '=', 'menu.menuID')
         -> where('penilaian.akunPembeliID', $akunPembeliID)
         -> where('penilaian.menuID', $menuID)
         -> pluck('menu.menuNama')

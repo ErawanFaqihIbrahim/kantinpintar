@@ -262,10 +262,6 @@
             <img class="group" src="{{ URL::asset('image/cupcake.png') }}" alt="Group" />
             <img class="rectangle-29" src="{{ URL::asset('image/search.png') }}" alt="Search" />
 
-            img class="group-217" src="{{ URL::asset('image/botol.png') }}" alt="Group 217" />
-            <img class="group" src="{{ URL::asset('image/cupcake.png') }}" alt="Group" />
-            <img class="rectangle-29" src="{{ URL::asset('image/search.png') }}" alt="Search" />
-
             <p class="mau-makan-apa-hari-ini"> <input type="text" placeholder="mau makan apa hari ini?"></p>
 
         </div>

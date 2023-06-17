@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\kedaiController;
 // use App\Http\Controllers\pembeliController;
 // use App\Http\Controllers\favoritController;
-
+// use App\http\Controllers\PenilaianMenuController;
+// use App\http\Controllers\SaldoController;
 
 
 /*
@@ -59,3 +60,33 @@ Route::get('favorit', function () {
 });
 
 Route::get('/homepage1/search',[pembeliController::class,'search']);
+
+Route::get('/home', function () {
+    return view('homepage1');
+});
+
+Route::get('/rating', function () {
+    return view('berirating1');
+});
+
+Route::get('/redeem', function () {
+    return view('redeemvoucher1');
+});
+
+Route::get('/form', function () {
+    return view('form');
+});
+
+Route::get('/formsaldo', function () {
+    return view('formsaldo');
+});
+
+Route::get('form', [PenilaianMenuController::class,'showForm']);
+Route::get('berirating1', [PenilaianMenuController::class,'showFormRating']);
+Route::post('berirating1', [PenilaianMenuController::class,'savePenilaian']);
+
+Route::get('formsaldo', [SaldoController::class,'showFormSaldo']);
+Route::get('redeemvoucher1', [SaldoController::class,'showFormIsiSaldo']);
+// Route::post('redeemvoucher1', [SaldoController::class,'showUpdateSaldo']);
+Route::post('redeemvoucher1', [SaldoController::class, 'showUpdateSaldo'])->name('redeemvoucher1');
+Route::get('homepage1/{saldo}', [SaldoController::class, 'showHomepage1'])->name('homepage1');

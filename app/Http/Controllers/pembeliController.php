@@ -6,16 +6,18 @@ use App\Models\kedai;
 use App\Models\akunPembeli;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\codetopup;
 use Illuminate\Support\Facades\DB;
 
 class pembeliController extends Controller
 {
-    public function showSaldo()
-    {
-        $dataAkunPembeli = DB::table('akun_pembelis')->get();
-        $dataKedai = DB::table('kedais')->get();
+    public function showSaldo(){
+        $dataAkunPembeli = DB::table('akunpembeli')->get();
+        $dataKedai = DB::table('kedai')->get();
 
-        return view('homepage1', ['dataAkunPembeli' => $dataAkunPembeli, 'dataKedai' => $dataKedai] );
+        $saldoTerbaru = session('saldoJumlah'); // Ambil saldo terbaru dari session
+
+        return view('homepage1', ['dataAkunPembeli' => $dataAkunPembeli, 'dataKedai' => $dataKedai, 'saldoTerbaru' => $saldoTerbaru]);
     }
 
     public function search(Request $request) {

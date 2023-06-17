@@ -154,3 +154,25 @@ Route::middleware(['autentikasi'])->group(function () {
     });
     Route::get('logout', [App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
 });
+
+
+Route::get ('/menu/{kedaiID}', [menuController::class, 'showMenu']);
+Route::get ('/menu/detail/{menuID}', [menuController::class, 'showDetailMenu']);
+
+Route::get ('/menu/detail/keranjang/{menuID}', [PesananController::class, 'tambahPesanan']);
+Route::post ('/menu/detail/keranjang/{menuID}', [PesananController::class, 'tambahPesanan']);
+
+Route::get ('/keranjang', [PesananController::class, 'showPesanan']);
+
+Route::get ('/bayar/{pesananID}', [BayarController::class, 'showSuccessBayar']);
+Route::get ('/bayar/invoice/{pesananID}', [BayarController::class, 'bayarPesanan']);
+
+Route::get ('/uploadmenu/form', [menuController::class, 'showFormMenu']);
+Route::post ('/uploadmenu', [menuController::class, 'uploadMenu']);
+
+Route::get ('/menukedai', [menuController::class, 'showMenuKedai']);
+
+Route::get ('/menukedai/{menuID}/edit', [menuController::class, 'editMenu']);
+Route::put ('/menukedai/{menuID}', [menuController::class, 'updateMenu']);
+
+Route::get ('/keranjang/{pesananID}/{pesananJumlah}/{menuNama}/hapus', [PesananController::class, 'hapusPesanan']);

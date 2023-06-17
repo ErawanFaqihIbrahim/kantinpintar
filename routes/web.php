@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 // use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-// use App\Http\Controllers\kedaiController;
-// use App\Http\Controllers\pembeliController;
-// use App\Http\Controllers\favoritController;
-// use App\http\Controllers\PenilaianMenuController;
-// use App\http\Controllers\SaldoController;
+use App\Http\Controllers\kedaiController;
+use App\Http\Controllers\pembeliController;
+use App\Http\Controllers\favoritController;
+use App\http\Controllers\PenilaianMenuController;
+use App\http\Controllers\SaldoController;
+use App\http\Controllers\LoginController;
 
 
 /*

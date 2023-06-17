@@ -8,31 +8,19 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 
-class AkunPembeli extends Model implements AuthenticatableContract
+class AkunPenjual extends Model implements AuthenticatableContract
 {
     use HasFactory, Authorizable, Authenticatable;
 
-    public $timestamps=false;
-
-    public function penilaian(){
-        //samain kayak nama model yang mau kamu sambungin
-        return $this->belongsTo('App\Models\Penilaian');
-    }
-
-    public function codetopup(){
-        return $this->hasMany('App\Models\CodeTopUp');
-    }
-
-    protected $table = 'akunpembeli';
+    protected $table = 'akunpenjual';
 
     protected $fillable = [
         'akunEmail',
         'akunNama',
         'akunPassword',
-        'saldoJumlah',
     ];
     protected $hidden = ['akunPassword'];
-    protected $primaryKey = 'akunPembeliID';
+    protected $primaryKey = 'akunPenjualID';
     protected $dates = ['created_at', 'updated_at'];
 
     public function getAuthPassword()

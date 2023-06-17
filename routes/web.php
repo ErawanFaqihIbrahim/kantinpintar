@@ -107,3 +107,49 @@ Route::get('diproses', function () {
 });
 
 Route::get('/diproses', [diprosesController::class, 'showDiproses']);
+
+// INI PUNYA BINTANG
+
+Route::get('/', [App\Http\Controllers\LoginController::class, 'login'])->name('login');
+Route::post('actionregisterPembeli', [App\Http\Controllers\LoginController::class, 'actionregisterPembeli'])->name('actionregisterPembeli');
+Route::post('actionregisterPenjual', [App\Http\Controllers\LoginController::class, 'actionregisterPenjual'])->name('actionregisterPenjual');
+Route::post('actionloginPenjual', [App\Http\Controllers\LoginController::class, 'actionloginPenjual'])->name('actionloginPenjual');
+Route::post('actionloginPembeli', [App\Http\Controllers\LoginController::class, 'actionloginPembeli']);
+Route::post('actionregisterKedai', [App\Http\Controllers\KedaiController::class, 'actionregisterKedai']);
+
+Route::get('welcome', function () {
+    return view('landingpage');
+});
+
+Route::middleware(['guest'])->group(function () {
+    // Taruh route yg butuh sudah ter login disini
+    Route::get('masuksbg', function () {
+        return view('masuksebagai');
+    });
+    Route::get('signuppenjual', function () {
+        return view('daftarpenjual');
+    });
+    Route::get('signuppembeli', function () {
+        return view('daftarpembeli');
+    });
+    Route::get('loginpenjual', function () {
+        return view('masukpenjual');
+    });
+    Route::get('loginpembeli', function () {
+        return view('masukpembeli');
+    });
+    Route::get('daftarkedai', function () {
+        return view('daftarkedai2');
+    });
+    Route::get('editkedai', function () {
+        return view('editkedai');
+    });
+});
+
+Route::middleware(['autentikasi'])->group(function () {
+    // Taruh route yg butuh sudah ter login disini
+    Route::get('/tes', function() {
+        return "tes";
+    });
+    Route::get('logout', [App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
+});

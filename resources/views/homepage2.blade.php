@@ -166,7 +166,7 @@
             padding: 24px 50px;
         }
 
-        .group-container a {
+        /* .group-container a {
             float: left;
             width: 65px;
             height: 80px;
@@ -177,7 +177,7 @@
             font-size: 36px;
             box-shadow: 0px 4px 4px #00000040;
             border-radius: 50px;
-        }
+        } */
 
         .group-119 {
             cursor: pointer;
@@ -298,20 +298,24 @@
         </div>
 
         <div class="group-container">
-            <div class="group-119">
-                <img class="icon-home-outline" src="{{ URL::asset('image/homep.jpeg') }}" alt="home">
-                <div class="place">Home</div>
-            </div>
-
-            <div class="group-113">
-                <img class="round" src="{{ URL::asset('image/menu.jpeg') }}" alt="menu">
-                <div class="place">Menu</div>
-            </div>
-
-            <div class="group-114">
-                <img class="round" src="{{ URL::asset('image/order.jpeg') }}" alt="order">
-                <div class="place">Order</div>
-            </div>
+            <a href="#">
+                <div class="group-119">
+                    <img class="icon-home-outline" src="{{ URL::asset('image/homep.jpeg') }}" alt="home">
+                    <div class="place">Home</div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="group-113">
+                    <img class="round" src="{{ URL::asset('image/menu.jpeg') }}" alt="menu">
+                    <div class="place">Menu</div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="group-114">
+                    <img class="round" src="{{ URL::asset('image/order.jpeg') }}" alt="order">
+                    <div class="place">Order</div>
+                </div>
+            </a>
         </div>
 
     </div>

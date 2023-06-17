@@ -59,3 +59,21 @@ Route::get('favorit', function () {
 });
 
 Route::get('/homepage1/search',[pembeliController::class,'search']);
+
+Route::get('jadwal', function () {
+    return view('jadwal');
+});
+
+Route::get('/jadwal', [jadwalController::class, 'showJadwal']);
+
+Route::get('selesai', function () {
+    return view('selesai');
+});
+
+Route::get('/selesai', [selesaiController::class, 'selesai']);
+
+Route::get('diproses', function () {
+    return view('diproses');
+});
+
+Route::get('/diproses', [diprosesController::class, 'showDiproses']);

@@ -53,8 +53,10 @@
         .homepage {
             align-items: center;
             background-color: rgba(248, 244, 240, 1);
-            height: 844px;
+            min-height: 844px;
+            height: auto;
             width: 390px;
+
         }
 
         .overlap-group1 {
@@ -377,7 +379,6 @@
                     <form action="/homepage1/search" method="GET">
 
                             <input class="search2" type="search" name="search" id="search-item" placeholder="temukan kedai">
-                                {{-- onkeyup="search()"> --}}
                                 <button type="submit" class="btn btn-default">
                                     <i class="fa fa-search"></i>
                                 </button>

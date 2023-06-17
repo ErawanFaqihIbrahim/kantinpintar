@@ -22,6 +22,11 @@
             height: 844px;
             width: 390px;
             padding: 31px 13px;
+            overflow-y: scroll
+        }
+
+        .homepage::-webkit-scrollbar {
+            display: none;
         }
 
         .hidden,
@@ -64,6 +69,7 @@
             height: 5px;
         }
 
+        .content {}
     </style>
 </head>
 
@@ -71,61 +77,83 @@
 
     <div class="homepage">
         <div><a href={{ 'homepage2' }}>
-            <img class="vector" src="{{ URL::asset('image/kembali.jpeg') }}" alt="kembali" />
-        </a>
+                <img class="vector" src="{{ URL::asset('image/kembali.jpeg') }}" alt="kembali" />
+            </a>
         </div>
         <div class="jumbotron">
 
             <h1 class="title"> Review &amp; Rating Kedai</h1>
             <br>
+            <div class="content">
+                <div class="media border p-3">
+                    <div class="media-body">
+                        <h6>Faqih Ibrahim <small><br><i>02/05/2023</i></small></h6>
+                        <p>Baksonya enak dan banyak!</p>
+                    </div>
 
-            <div class="media border p-3">
-                <div class="media-body">
-                    <h6>Faqih Ibrahim <small><br><i>02/05/2023</i></small></h6>
-                    <p>Baksonya enak dan banyak!</p>
-                </div>
+                    <div>
+                        <img src="{{ URL::asset('image/rating.jpeg') }}" style="width:60px;">
+                        <div class="text-block">4.0</div>
+                    </div>
 
-                <div>
-                    <img src="{{ URL::asset('image/rating.jpeg') }}" style="width:60px;">
-                    <div class="text-block">4.0</div>
-                </div>
-
-            </div>
-
-            <br>
-            <div class="media border p-3">
-                <div class="media-body">
-                    <h6>Bintang Bakkara <small><br><i>25/04/2023</i></small></h6>
-                    <p>Mantappp!</p>
-                </div>
-                <div>
-                    <img src="{{ URL::asset('image/rating.jpeg') }}" style="width:60px;">
-                    <div class="text-block">5.0</div>
-                </div>
-            </div>
-            <br>
-            <div class="media border p-3">
-                <div class="media-body">
-                    <h6>Femi Nabila <small><br><i>27/04/2023</i></small></h6>
-                    <p>Baksonya enak tapi asin!</p>
-                </div>
-                <div>
-                    <img src="{{ URL::asset('image/rating.jpeg') }}" style="width:60px;">
-                    <div class="text-block">3.5</div>
-                </div>
-            </div>
-            <br>
-            <div class="media border p-3">
-                <div class="media-body">
-                    <h6>Fathia Rahma <small><br><i>28/04/2023</i></small></h6>
-                    <p>Lezat dan bergiji!</p>
                 </div>
 
-                <div>
-                    <img src="{{ URL::asset('image/rating.jpeg') }}" style="width:60px;">
-                    <div class="text-block">4.5</div>
+                <br>
+                <div class="media border p-3">
+                    <div class="media-body">
+                        <h6>Bintang Bakkara <small><br><i>25/04/2023</i></small></h6>
+                        <p>Mantappp!</p>
+                    </div>
+                    <div>
+                        <img src="{{ URL::asset('image/rating.jpeg') }}" style="width:60px;">
+                        <div class="text-block">5.0</div>
+                    </div>
                 </div>
+                <br>
+                <div class="media border p-3">
+                    <div class="media-body">
+                        <h6>Femi Nabila <small><br><i>27/04/2023</i></small></h6>
+                        <p>Baksonya enak tapi asin!</p>
+                    </div>
+                    <div>
+                        <img src="{{ URL::asset('image/rating.jpeg') }}" style="width:60px;">
+                        <div class="text-block">3.5</div>
+                    </div>
+                </div>
+                <br>
+                <div class="media border p-3">
+                    <div class="media-body">
+                        <h6>Fathia Rahma <small><br><i>28/04/2023</i></small></h6>
+                        <p>Lezat dan bergiji!</p>
+                    </div>
 
+                    <div>
+                        <img src="{{ URL::asset('image/rating.jpeg') }}" style="width:60px;">
+                        <div class="text-block">4.5</div>
+                    </div>
+                </div>
+                <br>
+                <div class="media border p-3">
+                    <div class="media-body">
+                        <h6>Femi Nabila <small><br><i>27/04/2023</i></small></h6>
+                        <p>Baksonya enak tapi asin!</p>
+                    </div>
+                    <div>
+                        <img src="{{ URL::asset('image/rating.jpeg') }}" style="width:60px;">
+                        <div class="text-block">3.5</div>
+                    </div>
+                </div>
+                <br>
+                <div class="media border p-3">
+                    <div class="media-body">
+                        <h6>Femi Nabila <small><br><i>27/04/2023</i></small></h6>
+                        <p>Baksonya enak tapi asin!</p>
+                    </div>
+                    <div>
+                        <img src="{{ URL::asset('image/rating.jpeg') }}" style="width:60px;">
+                        <div class="text-block">3.5</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

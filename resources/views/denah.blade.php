@@ -54,7 +54,7 @@
             justify-content: flex-end;
             min-width: 322px;
             left: 0;
-            top: 56px;
+            top: 58px;
         }
 
         .title {

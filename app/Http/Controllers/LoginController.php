@@ -75,7 +75,7 @@ class LoginController extends Controller
         $attempt = Auth::guard('akunpembeli')->attempt(['akunEmail' => $request->email, 'password' => $request->password]);
 
         if ($attempt) {
-            return redirect('landingpage');
+            return redirect('homepage1');
         }else{
             Session::flash('error', 'Email atau Password Salah');
             return redirect('/');

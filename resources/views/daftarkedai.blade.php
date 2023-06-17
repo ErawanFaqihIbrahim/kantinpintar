@@ -269,7 +269,7 @@
 
 <body>
 
-    <form action="('updateKedai')" method="post">
+    <form action="('actionregisterKedai')" method="post">
 
     <div class="daftarkan-kedai screen">
         <h1 class="title">Pendaftaran Kedai</h1>

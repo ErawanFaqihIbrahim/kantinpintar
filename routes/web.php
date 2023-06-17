@@ -22,9 +22,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('menu');
-});
+// Route::get('/', function () {
+//     return view('menu');
+// });
 
 Route::get('homepage', function () {
     return view('homepage');
@@ -111,12 +111,12 @@ Route::get('/diproses', [diprosesController::class, 'showDiproses']);
 
 // INI PUNYA BINTANG
 
-Route::get('/', [App\Http\Controllers\LoginController::class, 'login'])->name('login');
-Route::post('actionregisterPembeli', [App\Http\Controllers\LoginController::class, 'actionregisterPembeli'])->name('actionregisterPembeli');
-Route::post('actionregisterPenjual', [App\Http\Controllers\LoginController::class, 'actionregisterPenjual'])->name('actionregisterPenjual');
-Route::post('actionloginPenjual', [App\Http\Controllers\LoginController::class, 'actionloginPenjual'])->name('actionloginPenjual');
-Route::post('actionloginPembeli', [App\Http\Controllers\LoginController::class, 'actionloginPembeli']);
-Route::post('actionregisterKedai', [App\Http\Controllers\KedaiController::class, 'actionregisterKedai']);
+Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::post('actionregisterPembeli', [LoginController::class, 'actionregisterPembeli'])->name('actionregisterPembeli');
+Route::post('actionregisterPenjual', [LoginController::class, 'actionregisterPenjual'])->name('actionregisterPenjual');
+Route::post('actionloginPenjual', [LoginController::class, 'actionloginPenjual'])->name('actionloginPenjual');
+Route::post('actionloginPembeli', [LoginController::class, 'actionloginPembeli']);
+Route::post('actionregisterKedai', [KedaiController::class, 'actionregisterKedai']);
 
 Route::get('welcome', function () {
     return view('landingpage');
@@ -140,7 +140,7 @@ Route::middleware(['guest'])->group(function () {
         return view('masukpembeli');
     });
     Route::get('daftarkedai', function () {
-        return view('daftarkedai2');
+        return view('daftarkedai');
     });
     Route::get('editkedai', function () {
         return view('editkedai');

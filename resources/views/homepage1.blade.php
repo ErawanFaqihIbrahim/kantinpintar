@@ -39,8 +39,14 @@
         .homepage {
             align-items: center;
             background-color: rgba(248, 244, 240, 1);
+<<<<<<< HEAD
             height: 1680px;
+=======
+            min-height: 844px;
+            height: auto;
+>>>>>>> 3dadf5fbea81cd9b6be1053d60d789d46504c950
             width: 390px;
+
         }
         .overlap-group1 {
             height: 256px;
@@ -271,8 +277,25 @@
 
                 <img class="group-217" src="{{ URL::asset('image/botol.png') }}" />
                 <img class="group" src="{{ URL::asset('image/cupcake.png') }}" />
+<<<<<<< HEAD
                 <img class="rectangle-29" src="{{ URL::asset('image/search.png') }}" alt="Search" />
                 <p class="search"> <input type="text" placeholder="mau makan apa hari ini?"></p>
+=======
+
+                <div class="search">
+                    <form action="/homepage1/search" method="GET">
+
+                            <input class="search2" type="search" name="search" id="search-item" placeholder="temukan kedai">
+                                <button type="submit" class="btn btn-default">
+                                    <i class="fa fa-search"></i>
+                                </button>
+
+
+                    </form>
+                </div>
+
+
+>>>>>>> 3dadf5fbea81cd9b6be1053d60d789d46504c950
             </div>
         </div>
         <nav class="navbar navbar-expand-sm bg-success sticky-top">

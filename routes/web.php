@@ -61,7 +61,6 @@ Route::get('favorit', function () {
 
 Route::get('/homepage1/search',[pembeliController::class,'search']);
 
-<<<<<<< HEAD
 Route::get('/home', function () {
     return view('homepage1');
 });
@@ -91,7 +90,7 @@ Route::get('redeemvoucher1', [SaldoController::class,'showFormIsiSaldo']);
 // Route::post('redeemvoucher1', [SaldoController::class,'showUpdateSaldo']);
 Route::post('redeemvoucher1', [SaldoController::class, 'showUpdateSaldo'])->name('redeemvoucher1');
 Route::get('homepage1/{saldo}', [SaldoController::class, 'showHomepage1'])->name('homepage1');
-=======
+
 Route::get('jadwal', function () {
     return view('jadwal');
 });
@@ -109,4 +108,3 @@ Route::get('diproses', function () {
 });
 
 Route::get('/diproses', [diprosesController::class, 'showDiproses']);
->>>>>>> 3dadf5fbea81cd9b6be1053d60d789d46504c950

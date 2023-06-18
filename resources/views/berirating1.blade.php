@@ -275,7 +275,6 @@
                 </div>
                 <br>
         </div>
-        <div class="kodePesanan">Pesanan: F-3024</div>
         <div class="komentar">Komentar</div>
         <a href="javascript:SubmitForm('form1')" onclick="window.event.stopPropagation()">
             <input class="isiKomentar" name="isiKomentar" placeholder="tulis komentarmu!" type="text"
